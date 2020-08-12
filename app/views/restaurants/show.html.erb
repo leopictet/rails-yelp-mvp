@@ -1,6 +1,20 @@
-<h1><%= @restaurant.name %></h1>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+        <h1><%= @restaurant.name %></h1>
+      <hr>
+      <p> Address: <%= @restaurant.address %> </p>
+      <hr>
+      <p> Phone: <%= @restaurant.phone_number %> </p>
+      <hr>
+      <p> Category: <%= @restaurant.category.capitalize %> </p>
+      <hr>
+      <h4>Reviews: </h4>
 
-<h3><%= @restaurant.address %></h3>
-<h3><%= @restaurant.category.capitalize %></h3>
 
-
+      <%= link_to new_restaurant_review_path(@restaurant) do%>
+        <i class ="fa-hearth"></i>
+      <% end  %>
+    </div>
+  </div>
+</div>

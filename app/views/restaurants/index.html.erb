@@ -2,4 +2,5 @@
 <% @restaurants.each do |restaurant| %>
 <h4><%= restaurant.name %></h4>
 <h4>Address : <%= restaurant.address %></h4>
+<%= link_to "Check #{restaurant.name}", restaurant_path(restaurant), class: "card-link" %>
 <%end%>
